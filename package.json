@@ -1,0 +1,16 @@
+{
+  "name": "juandaza.me",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.8.0",
+    "vuepress-theme-book": "0.0.5"
+  }
+}
