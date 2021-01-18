@@ -29,7 +29,7 @@ module.exports = {
         sidebar: [
           '/',
           {
-            title: 'Snippets',
+            title: 'Help Snippets',
             collapsible: true,
             sidebarDepth: 2,
             children:[
@@ -38,72 +38,67 @@ module.exports = {
               '/guide/snippets/pyspark'
             ]
           },
+          '/guide/algos/',
           {
             title: 'Machine Learning',
             collapsible: true,
             sidebarDepth: 2,
             children:[
               '/guide/algos/MLlist',
-              '/guide/algos/Models',
               '/guide/algos/NLP',
             ]
           },
+          {
+            title: 'Graphs',
+            collapsible: true,
+            sidebarDepth: 2,
+            children:[
+              '/guide/graphs/resources',
+            ]
+          },
+          '/guide/mlops/',
+          {
+            title: 'Ml Ops',
+            collapsible: true,
+            sidebarDepth: 2,
+            children:[
+              '/guide/mlops/docker',
+              '/guide/mlops/jenkins',
+              '/guide/mlops/metaflow',
+              '/guide/mlops/terraform',
+            ]
+          },
+          '/guide/certifications/',
           {
             title: 'AWS SA',
             collapsible: true,
             sidebarDepth: 2,
             children:[
-              '/guide/aws/0_aws_general',
-              '/guide/aws/1_aws_iam',
-              '/guide/aws/1_aws_s3',
+              '/guide/certifications/aws/0_aws_general',
+              '/guide/certifications/aws/1_aws_iam',
+              '/guide/certifications/aws/1_aws_s3',
             ]
           },
           {
-            title: 'AWS ML',
+            title: 'Azure ML DP-100',
             collapsible: true,
             sidebarDepth: 2,
             children:[
-              '/guide/aws_ml/sagemaker_studio',
-            ]
-          },
-          {
-            title: 'Azure ML',
-            collapsible: true,
-            sidebarDepth: 2,
-            children:[
-              '/guide/azure/dp100_exam_review',
-              '/guide/azure/dp100_aml_summary',
-              '/guide/azure/dp100_pt1',
-              '/guide/azure/dp100_pt2',
-              '/guide/azure/dp100_pt3',
-              '/guide/azure/dp100_module1',
-              '/guide/azure/dp100_module2',
-              '/guide/azure/dp100_module3',
-              '/guide/azure/dp100_module4',
-              '/guide/azure/dp100_module5',
-              '/guide/azure/dp100_module6',
-              '/guide/azure/dp100_module7',
-              '/guide/azure/dp100_module8',
-              '/guide/azure/dp100_module9',
-              '/guide/azure/dp100_module10',
-            ]
-          },
-          {
-            title: 'Containers',
-            collapsible: true,
-            sidebarDepth: 2,
-            children:[
-              '/guide/containers/docker',
-            ]
-          },
-          {
-            title: 'Other Learning',
-            collapsible: true,
-            sidebarDepth: 2,
-            children:[
-              '/guide/learning/terraform',
-              '/guide/learning/jenkins',
-              '/guide/learning/metaflow',
+              '/guide/certifications/azure_dp_100/dp100_exam_review',
+              '/guide/certifications/azure_dp_100/dp100_aml_summary',
+              '/guide/certifications/azure_dp_100/dp100_pt1',
+              '/guide/certifications/azure_dp_100/dp100_pt2',
+              '/guide/certifications/azure_dp_100/dp100_pt3',
+              '/guide/certifications/azure_dp_100/dp100_module1',
+              '/guide/certifications/azure_dp_100/dp100_module2',
+              '/guide/certifications/azure_dp_100/dp100_module3',
+              '/guide/certifications/azure_dp_100/dp100_module4',
+              '/guide/certifications/azure_dp_100/dp100_module5',
+              '/guide/certifications/azure_dp_100/dp100_module6',
+              '/guide/certifications/azure_dp_100/dp100_module7',
+              '/guide/certifications/azure_dp_100/dp100_module8',
+              '/guide/certifications/azure_dp_100/dp100_module9',
+              '/guide/certifications/azure_dp_100/dp100_module10'
             ]
           },
         ]

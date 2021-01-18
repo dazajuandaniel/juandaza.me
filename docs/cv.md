@@ -10,7 +10,7 @@ subtitle: Analytics | Operational Intelligence | Data Science
 **WorkForce Delta** - January 2017 to January 2018
 <br />Consultant (Data Science)
 
-**Parent Paperwork** - December 2016 to February 2017
+**EdSmart** - December 2016 to February 2017
 <br />Data Science Intern 
 
 **Unilever** - January 2016 to June 2016
@@ -36,13 +36,16 @@ subtitle: Analytics | Operational Intelligence | Data Science
 <br />March 2014
 
 # Awards
-NAB Honoree 2020
+* NAB Honouree 2020
+* Sales Engineer - Outstanding Performance
 
 # Technologies & Skills
 ### Programming Languages
-* Python
-* SQL
-* R
+* Advanced Python
+* Advanced SQL
+* Intermediate R
+* Intermediate PySpark
 
 ### Software
 * Tableau/PowerBI
+* Jenkins, Docker

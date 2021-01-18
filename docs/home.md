@@ -1,26 +1,16 @@
-# Home
+# Main Page
 
 ## Motivation
-Document basic and advanced topics of the items that I have used either via self-learning or at any of my previous roles.
+Repo to hold basic and advanced topics of the items that I have used either via self-learning or at any of my previous roles.
 
-## Snippets
+## [Snippets](./guide/snippets/python)
 Different snippets that are handy. Has resources from across the web for common programming problems.
 
-* [Python](./guide/snippets/python.md)
-* [PySpark](./guide/snippets/pyspark.md)
-* [Github](./guide/snippets/github.md)
+## [General Machine Learning](./guide/algos)
+Reference table of ML Algorithms
 
-## Machine Learning
-List of algorithms that I have used
-* [Sample ML Algorithms](./guide/algos/MLlist.md)
-* [ML Tasks List (coming soon)]()
-* [NLP Tasks (coming soon)]()
+## [ML Ops](./guide/mlops)
+Personal projects & Tests for different ML Ops tools.
 
-## Learning
-Notes from the different elements that I self-learn.
-
-* [Azure DP100](./guide/azure/dp100_module1.md)
-* [Docker Basics](./guide/containers/docker.md)
-* [AWS Sagemaker Notes (coming soon)]()
-* [AWS SA (coming soon)]()
-* [Python Ray (coming soon)]()
+## [Cloud Certification](./guide/certifications)
+Knowledge Repository for Cloud Certifications

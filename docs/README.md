@@ -1,6 +1,5 @@
 ---
 home: true
-# heroImage: /hero.png
 heroText: Juan Daza
 tagline: Personal Site 
 actionText: Vamos →
