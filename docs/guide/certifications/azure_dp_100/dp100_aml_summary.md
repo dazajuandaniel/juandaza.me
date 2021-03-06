@@ -13,7 +13,7 @@ Workspace -> Top Level Resource for AML
 * Models (registered models)
 * Deployment Endpoints
 
-## Creating a AML [Workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace)
+## Creating an AML [Workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace)
 Resources built as accompanying resource
 * Azure Storage Account
 * Azure Container Registry

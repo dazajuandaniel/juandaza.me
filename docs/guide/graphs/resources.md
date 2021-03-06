@@ -17,8 +17,10 @@ Below is a collection of the top packages, repos, and papers relating to Graphs 
 
 ## Books
 * The Practitioner's Guide to Graph Data: Applying Graph Thinking and Graph Technologies to Solve Complex Problems by Denise Gosnell
+* [Graph Representation Learning Book by William L. Hamilton](https://www.cs.mcgill.ca/~wlh/grl_book/)
 
 ## Articles
 * [Deep learning on graphs: successes, challenges, and next steps](https://towardsdatascience.com/deep-learning-on-graphs-successes-challenges-and-next-steps-7d9ec220ba8)
 * [Top Applications of Graph Neural Networks 2021](https://medium.com/criteo-engineering/top-applications-of-graph-neural-networks-2021-c06ec82bfc18)
 * [Semantic Models for Constructing Knowledge Graphs](https://towardsdatascience.com/semantic-models-for-constructing-knowledge-graphs-38c0a1df316a)
+* [Machine Learning With Graphs](https://wandb.ai/syllogismos/machine-learning-with-graphs/reports/Machine-Learning-With-Graphs---VmlldzozODE5Mzk)

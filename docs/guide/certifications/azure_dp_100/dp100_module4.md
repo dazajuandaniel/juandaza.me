@@ -15,6 +15,12 @@ Data stores can be accessed via the SDK, or mounted in an experiment in order to
 ### Adding Datastores to a Workspace
 Every workspace has 2 built-in datasores by default (Storage Blob Containter & Azure Storaga File Container), however, you can add external ones since data might be there.
 
+**Notes:**
+
+* It is a good idea to change the default datastore
+* Parquet format is generally better for performance
+* *Premium* level storage in Azure Blob is usually better for performance of large files but more costly.
+
 #### Registering a Datastore
 ```python
 from azureml.core import Workspace, Datastore
