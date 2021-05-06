@@ -1,4 +1,4 @@
-# List of Algorithms
+# Algorithms Table
 List of articles/papers and more I have come across that have helped me at any point during my projects. It is by no means a comprehensive list.
 
 | Algo Name 	| Type  | Use Cases	| Resources 	|

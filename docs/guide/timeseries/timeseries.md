@@ -1,8 +1,8 @@
 # Timeseries Quick Guide
 
 ## Timeseries Analysis
-::: warning
-This is WIP
+::: warning PyTiempo
+WIP - Python Package for common Timeseries Analysis tasks
 :::
 
 ## Useful Resources

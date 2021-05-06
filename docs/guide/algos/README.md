@@ -1,12 +1,17 @@
-# General Machine Learning
+# Machine Learning
 
 ## Algorithm Quick Table Reference
-::: warning
-This is WIP
-:::
+*Reference guide for ML Algorithms*
+
+[Resources](MLlist)
+
+## Deep Learning (ANN)
+*ANN is a Machine Learning model inspired by the networks of biological neurons found in our brains*
+
+[Resources](../dl/deep_learning)
 
 ## NLP
-::: warning
+::: warning WIP
 This is WIP
 :::
 
