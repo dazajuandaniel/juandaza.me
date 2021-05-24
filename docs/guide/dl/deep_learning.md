@@ -1,4 +1,4 @@
-# Deep Learning (ANN)
+# Deep Learning 
 [[toc]]
 ## ANN General Concepts
 
@@ -107,3 +107,6 @@ At every training step, every neuron (including the input neurons, but always ex
     keras.layers.Dropout(rate=0.2),
     ...
 ```
+
+## Resources
+* [Loss Functions](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)

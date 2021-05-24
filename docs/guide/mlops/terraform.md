@@ -2,8 +2,6 @@
 
 ## Learning Presentation
 
-<iframe src="https://onedrive.live.com/embed?cid=42456911A7C9B1CB&amp;resid=42456911A7C9B1CB%2132990&amp;authkey=AKQrec1_VsHwX7U&amp;em=2&amp;wdAr=1.7777777777777777" width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-
 ## What is Terraform
 Allows to write infrastructure as code.
 Keeps infrastructure in a certain state (compliant)

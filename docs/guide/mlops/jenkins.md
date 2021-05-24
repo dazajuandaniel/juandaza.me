@@ -1,6 +1,79 @@
 # Jenkins Learning
 
-### Resources
+## Jenkis Terraform Architecture
+
+### VPC
+**VPC Config**
+* IPv4 CIDR: `10.0.0.0/16`
+
+**Subnets**
+* Private Subnets x2
+    * Private Subnet 1:
+        * IPv4 CIDR: `10.0.2.0/24`
+    * Private Subnet 2:
+        * IPv4 CIDR: `10.0.3.0/24`
+
+* Public Subnets x2
+    * Public Subnet 1:
+        * IPv4 CIDR: `10.0.0.0/24`
+        * Auto Assign IP Address: `True`
+    * Public Subnet 2:
+        * IPv4 CIDR: `10.0.1.0/24`
+        * Auto Assign IP Address: `True`
+    
+* Router Tables x3:
+    * Public Router Table:
+        * Routes Target -> From `0.0.0.0/0` to `Internet Gateway`
+        * Associations: Public Subnets
+    * Private Router Table 1:
+        * Routes Target -> From `0.0.0.0/0` to `NAT Gateway`
+        * Private Subnet 1
+    * Private Router Table 2:
+        * Routes Target -> From `0.0.0.0/0` to `NAT Gateway`
+        * Private Subnet 2
+
+**Internet Gateway**
+
+Attached to VPC
+
+**Elastic IP IDs**
+* Associated to `Nat Gateways`
+
+**Nat Gateways**
+* One per Public Subnet
+
+**Network ACL**
+* Associated with all 4 Subnets
+* Inbound Rules:
+    * Source `0.0.0.0/0` - Rule Number `100` - Type `All traffic`
+* Outbound Rules:
+    * Source `0.0.0.0/0` - Rule Number `100` - Type `All traffic`
+
+**Security Groups**
+* Load Balancer SG
+    * Inbound Rules: `HTTPS` - `443` - `0.0.0.0/0`
+    * Outbound Rules: `8080` - `JenkinsSecurityGroup`
+* Jenkins SG
+    * Inbound Rules: `TCP` - `8080` - `0.0.0.0/0`
+    * Outbound Rules: `All traffic` - `0.0.0.0/0`
+* Jenkins EFS
+    * Inbound Rules: `TCP` - `2049` - `JenkinsSecurityGroup`
+    * Outbound Rules: `All traffic` - `0.0.0.0/0`
+
+## EC2
+**Load Balancer**
+* Attributes:
+    * HTTP LB
+    * Internet-facing scheme
+    * Subnets: `Public Subnet 1` & `Public Subnet 2`
+* Security Group: `Load Balancer SG`
+* Listener:
+    * HTTP 443
+    * Certification from DNS
+* Forwarding:
+    * To `JenkinsTargetGroup`:
+        * Target: `10.0.3.81` - `8080` - 
+## Resources
 
 #### Install Jenkins
 

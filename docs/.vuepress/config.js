@@ -77,7 +77,8 @@ module.exports = {
             children:[
               '/guide/certifications/aws/0_aws_general',
               '/guide/certifications/aws/1_aws_iam',
-              '/guide/certifications/aws/1_aws_s3',
+              '/guide/certifications/aws/2_aws_ec2',
+              '/guide/certifications/aws/3_aws_ec2_instance_storage',
             ]
           },
           {
