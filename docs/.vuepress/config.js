@@ -79,6 +79,8 @@ module.exports = {
               '/guide/certifications/aws/1_aws_iam',
               '/guide/certifications/aws/2_aws_ec2',
               '/guide/certifications/aws/3_aws_ec2_instance_storage',
+              '/guide/certifications/aws/4_aws_elb',
+              '/guide/certifications/aws/5_aws_asg',
             ]
           },
           {

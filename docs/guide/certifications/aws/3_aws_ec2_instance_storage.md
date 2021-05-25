@@ -22,6 +22,7 @@ EBS Volumes are characterized in Size, Throuhput & IOPS. **Only `gp2` and `gp3` 
 | :-: | :-: |
 | Size and IOPS are linked | Size and IOPS are independent |
 
+* `gp2` IOPS peak at ~5GB
 
 **Provisioned IOPS (PIOPS)**
 
