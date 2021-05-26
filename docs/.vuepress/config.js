@@ -82,6 +82,7 @@ module.exports = {
               '/guide/certifications/aws/4_aws_elb',
               '/guide/certifications/aws/5_aws_asg',
               '/guide/certifications/aws/6_aws_databases',
+              '/guide/certifications/aws/7_aws_route53',
             ]
           },
           {
