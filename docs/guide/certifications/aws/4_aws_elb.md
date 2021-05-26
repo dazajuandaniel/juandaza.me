@@ -82,7 +82,7 @@ Different Naming:
 * If Target Group: Deregistration delay
 It is *the time to complete "in-flight requests"* while the instance is de-registering or unhealthy. It stops sending new requests to the instance which is de-registrering.
 
-## Notes:
+## Notes
 * They scale but are not instantenous
 * Troubleshooting:
     * 4xx client induced errors

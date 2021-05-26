@@ -48,7 +48,7 @@ Allows the user to to perform extra steps before going in service or after going
 * T2 unlimited burst feature
 * Create parameters subset
 
-## Notes:
+## Other Notes
 * Impose stress on Instance: 
     ```sh
     sudo apt-get install stress
