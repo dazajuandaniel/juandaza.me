@@ -84,6 +84,7 @@ module.exports = {
               '/guide/certifications/aws/6_aws_databases',
               '/guide/certifications/aws/7_aws_route53',
               '/guide/certifications/aws/8_aws_s3',
+              '/guide/certifications/aws/9_aws_cdn',
             ]
           },
           {
