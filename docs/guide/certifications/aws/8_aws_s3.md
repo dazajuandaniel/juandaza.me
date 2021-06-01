@@ -1,16 +1,11 @@
----
-title: AWS S3
-description: Learnings from Online Courses
-author: Juan Daza
-type: article
----
 # Simple Storage Service (S3)
 
 ## Introduction
 Secure, durable, highly-scalable object storage.
 * Safe place to store files
 * Spread across devices/facilities
-* 0 bytes - 5 TB
+* Object size: 0 bytes - 5 TB
+	* Max upload object size is 5GB (multipart)
 * Universal namespace -> Names must be unique
 * HTTP 200 code is upload successful
 * Object Features:
@@ -26,6 +21,7 @@ Secure, durable, highly-scalable object storage.
 	* If a file is uploaded, the file is readable immediately
 * `Eventual Consistency for **overwrite** PUTS and DELETES (takes time to progapate)` 
 	* If it's updated, we might get the old version
+	* **As of Dec 2020 all operations are strongly consistant**
 
 ## Guarantees
 Build for 99.99% availability -> Amazon guarantees 99.9% availability
@@ -36,8 +32,9 @@ Amazon guarantees 99.999999999% durability (11x9s)
 * Lifecycle management
 * Versioning
 * Encryption
-* MFA Delete
+* MFA Delete -> Only root account can enable/disable MFA Delete
 * Secure using ACL & Bucket Policies
+
 ## Storage Classess
 |Class| Description  |  Notes |
 |--|--|--|
@@ -50,6 +47,9 @@ Amazon guarantees 99.999999999% durability (11x9s)
 * ava = Designed for availability
 * dur = Durability
 
+![s3_storage_classes](/images/s3_storage_classes.png)
+
+
 ## S3 Pricing
 Charged on:
 * Storage
@@ -60,25 +60,47 @@ Charged on:
 * Transfer Acceleration
 
 ## S3 Security & Encryption
+
+**Security**
+* User Based:
+	* IAM Policies: IAM principal can access an S3 object if either IAM permission allows or the Bucket Policy allows.
+* Resourced Based:
+	* Bucket policies (allows cross account)
+* Object ACL
+
 By default all buckets are private
 
 * Bucket Policies -> Workt at a Bucket level
 * Access Control Lists -> Work at an object level
 
-S3 Buckets can be configured to create access logs
+**Access Logs**
+* S3 Buckets can be configured to create access logs and log any api call on the S3
 
 **Encryption**
 
-In Transit -> SSL/TLS
+In Transit ->
+
+SSL/TLS
+
+Amazon S3 exposes:
+* HTTP endpoint
+* HTTPS endpoint (mandatory for `SSE-C`)
 
 At Rest -> 
 
-	Server side: 
-		1. S3 Managed Keys - SSE-S3
-		2. AWS KMS
-		3. Customer Provided Keys
-	Client Side:
-		1. User uploads keys
+Server side: 
+1. `SSE-S3` -> S3 Managed Keys by AWS:
+	* Server side encryption
+	* AES-256 
+	* Must set header: `x-amz-server-side-encryption:AE256`
+2. `SSE-KMS` -> AWS KMS
+	* Gives User Control + audit trail 
+	* Must set header: `x-amz-server-side-encryption:awskms`
+3. `SSE-C` -> Customer Provided Keys
+	* Customer provides keys
+	* HTTPS must be used
+	* Encryption key must be provided in HTTP header
+4. `Client Side` -> Encryption is done before sending to S3
 
 ## S3 Versioning
 * Cannot be disabled only suspended
@@ -90,6 +112,7 @@ At Rest ->
 
 ## S3 Lifecycle
 * Can be enabled for Current/Previous versions
+* Analytics can be enabled to help understand when to transition.	
 
 ## S3 Object Lock & Glacier Lock
 * Used for a `write once, read many` model
@@ -101,6 +124,9 @@ At Rest ->
 **S3 Prefix**
 Anything after the bucket-name
 
+The application can achieve `3500` PUT/COPY/POST/DELETE and `5500` GET *per prefix*.
+* KMS is a limitation since when a file is uploaded, there is a quota of up to 300000 requests/sec.
+
 **S3 Performance Tips**
 1. Better performance by spreading the reads across different prefixes
 2. There are limitations if KMS is used:
@@ -111,6 +137,7 @@ Anything after the bucket-name
 
 ## S3 Select
 Used to retrieve subset of data by running simple SQL Queries
+![s3_select](/images/s3_select.png)
 
 ## AWS Organizations & Consolidated Billing
 Account management service that enables to consolidate multiple AWS accounts.
@@ -130,9 +157,23 @@ Account management service that enables to consolidate multiple AWS accounts.
 * Can change ownership or storage class
 * It's set up for new objects, not for objects currently in the bucket
 * Delete markers are not replicated and individual versions deletions are not replicated
+* There is no replication chaining. If Bucket 1 replicates to Bucket 2, and Bucket 2 replicates to Bucket 3, then Bucket 1 is not replicated to Bucket 3.
 
 ## S3 Transfer Acceleration
 Uses CloudFront to accelerate uploads to S3. Uploads to an edge location (using an url) and then it lands in the bucket. Basically it leverages AWS backbone
+
+## S3 Event Notifications
+Get notificiation when an event happens in the bucket. Rules can be created by object names.
+
+**Use Case**
+* Create thumbnails
+
+Targets:
+1. sns
+2. sqs
+3. Lambda
+
+Versioning needs to be enabled to get event notifications.
 
 ## AWS DataSync
 Move large amounts of on-premise data into AWS -> Install the agent in the server and copys the data to AWS

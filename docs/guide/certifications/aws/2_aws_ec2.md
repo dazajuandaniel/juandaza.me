@@ -47,6 +47,8 @@ Control how traffic is controlled into and out of the instance.
 * Can be attached to multiple instances
 * Lock down to region/VPC combination
 * EC2 Instance Connects allows to SSH easier (still requires Security Groups)
+* `Instance Metadata` is available in `http://169.254.169.254/latest/meta-data`
+    * Can retrieve the IAM role but not the IAM policy
 
 ## Launch Types
 * On-Demand Instances: Pay for what you use
