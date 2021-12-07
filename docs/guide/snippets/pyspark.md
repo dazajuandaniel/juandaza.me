@@ -71,3 +71,42 @@ windowSpec = \
     .partitionBy(...) \
     .orderBy(...)
 ```
+
+### UDFs
+As decorator
+```python
+@udf("string")
+def decoratorUDF(input_value:str) -> str:
+    return input_value[0]
+```
+
+As a function
+```python
+
+def functionUDF(input_value:str) -> str:
+    return input_value[0]
+
+# Wrap it for use
+myUDF = udf(functionUDF)
+
+# Use it
+df.select(myUDF(col("my_column_here")))
+```
+SQL
+```python
+def functionUDF(input_value:str) -> str:
+    return input_value[0]
+
+# Register it for use
+spark.udf.register("sql_udf", functionUDF)
+
+# Use it
+SELECT sql_udf(my_column_here) as udfcolumname from <table>
+```
+
+Vectorized UDF
+```python
+@pandas_udf("string")
+def vectorizedUDF(input_value: pd.Series) -> pd.Series:
+    return input_value[0]
+```
