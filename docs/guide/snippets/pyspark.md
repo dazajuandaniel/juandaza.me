@@ -110,3 +110,51 @@ Vectorized UDF
 def vectorizedUDF(input_value: pd.Series) -> pd.Series:
     return input_value[0]
 ```
+
+### Configs
+```python
+# Cores in Cluster
+sc.defaultParallelism
+spark.sparkContext.defaultParallelism
+
+# Default shuffle partitions
+spark.conf.get("spark.sql.shuffle.partitions")
+spark.conf.set("spark.sql.shuffle.partitions","8")
+```
+
+### Partitions
+```python
+# Get number of partitions
+df.rdd.getNumPartitions()
+
+# Repartition
+coalesce() # Narrow Transformation - can't guarantee even records across all partitions
+
+repartition() # Wide Transformation - requires shuffling all data
+```
+
+### Structured Streaming
+```python
+spark.readStream
+     <input config>
+     .filter()
+     .groupBy()
+     .writeStream
+     <input sink config>
+     .start()
+```
+Monitor a Stream
+
+```python
+# Get StreamID
+streamQuery.id
+
+# Get Stream Status
+streamQuery.status
+
+# Waits for query to complete before terminating the process
+streamQuery.awaitTermination(5)
+
+# Stops the stream
+streamQuery.stop()
+```
