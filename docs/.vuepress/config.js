@@ -71,44 +71,54 @@ module.exports = {
           },
           '/guide/certifications/',
           {
-            title: 'AWS SA',
+            title: 'Databricks',
             collapsible: true,
             sidebarDepth: 2,
             children:[
-              '/guide/certifications/aws/0_aws_general',
-              '/guide/certifications/aws/1_aws_iam',
-              '/guide/certifications/aws/2_aws_ec2',
-              '/guide/certifications/aws/3_aws_ec2_instance_storage',
-              '/guide/certifications/aws/4_aws_elb',
-              '/guide/certifications/aws/5_aws_asg',
-              '/guide/certifications/aws/6_aws_databases',
-              '/guide/certifications/aws/7_aws_route53',
-              '/guide/certifications/aws/8_aws_s3',
-              '/guide/certifications/aws/9_aws_cdn',
+              '/guide/databricks/db_concepts',
+              '/guide/mlops/db_data_engineering'
             ]
           },
-          {
-            title: 'Azure ML DP-100',
-            collapsible: true,
-            sidebarDepth: 2,
-            children:[
-              '/guide/certifications/azure_dp_100/dp100_exam_review',
-              '/guide/certifications/azure_dp_100/dp100_aml_summary',
-              '/guide/certifications/azure_dp_100/dp100_pt1',
-              '/guide/certifications/azure_dp_100/dp100_pt2',
-              '/guide/certifications/azure_dp_100/dp100_pt3',
-              '/guide/certifications/azure_dp_100/dp100_module1',
-              '/guide/certifications/azure_dp_100/dp100_module2',
-              '/guide/certifications/azure_dp_100/dp100_module3',
-              '/guide/certifications/azure_dp_100/dp100_module4',
-              '/guide/certifications/azure_dp_100/dp100_module5',
-              '/guide/certifications/azure_dp_100/dp100_module6',
-              '/guide/certifications/azure_dp_100/dp100_module7',
-              '/guide/certifications/azure_dp_100/dp100_module8',
-              '/guide/certifications/azure_dp_100/dp100_module9',
-              '/guide/certifications/azure_dp_100/dp100_module10'
-            ]
-          },
+          // '/guide/certifications/',
+          // {
+          //   title: 'AWS SA',
+          //   collapsible: true,
+          //   sidebarDepth: 2,
+          //   children:[
+          //     '/guide/certifications/aws/0_aws_general',
+          //     '/guide/certifications/aws/1_aws_iam',
+          //     '/guide/certifications/aws/2_aws_ec2',
+          //     '/guide/certifications/aws/3_aws_ec2_instance_storage',
+          //     '/guide/certifications/aws/4_aws_elb',
+          //     '/guide/certifications/aws/5_aws_asg',
+          //     '/guide/certifications/aws/6_aws_databases',
+          //     '/guide/certifications/aws/7_aws_route53',
+          //     '/guide/certifications/aws/8_aws_s3',
+          //     '/guide/certifications/aws/9_aws_cdn',
+          //   ]
+          // },
+          // {
+          //   title: 'Azure ML DP-100',
+          //   collapsible: true,
+          //   sidebarDepth: 2,
+          //   children:[
+          //     '/guide/certifications/azure_dp_100/dp100_exam_review',
+          //     '/guide/certifications/azure_dp_100/dp100_aml_summary',
+          //     '/guide/certifications/azure_dp_100/dp100_pt1',
+          //     '/guide/certifications/azure_dp_100/dp100_pt2',
+          //     '/guide/certifications/azure_dp_100/dp100_pt3',
+          //     '/guide/certifications/azure_dp_100/dp100_module1',
+          //     '/guide/certifications/azure_dp_100/dp100_module2',
+          //     '/guide/certifications/azure_dp_100/dp100_module3',
+          //     '/guide/certifications/azure_dp_100/dp100_module4',
+          //     '/guide/certifications/azure_dp_100/dp100_module5',
+          //     '/guide/certifications/azure_dp_100/dp100_module6',
+          //     '/guide/certifications/azure_dp_100/dp100_module7',
+          //     '/guide/certifications/azure_dp_100/dp100_module8',
+          //     '/guide/certifications/azure_dp_100/dp100_module9',
+          //     '/guide/certifications/azure_dp_100/dp100_module10'
+          //   ]
+          // },
         ]
         },
     plugins: [
