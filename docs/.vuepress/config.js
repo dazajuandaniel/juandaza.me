@@ -69,14 +69,14 @@ module.exports = {
               '/guide/mlops/terraform',
             ]
           },
-          '/guide/certifications/',
+          '/guide/databricks/',
           {
             title: 'Databricks',
             collapsible: true,
             sidebarDepth: 2,
             children:[
               '/guide/databricks/db_concepts',
-              '/guide/mlops/db_data_engineering'
+              '/guide/databricks/db_data_engineering'
             ]
           },
           // '/guide/certifications/',
