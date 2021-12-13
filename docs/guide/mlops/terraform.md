@@ -1,6 +1,4 @@
-# Terraform Learning
-
-## Learning Presentation
+# Terraform
 
 ## What is Terraform
 Allows to write infrastructure as code.
