@@ -13,6 +13,9 @@ Similar to doing `from library import bla`
 ```bash
 # List files
 dbutils.fs.ls(<path>)
+
+# View first few rows
+dbutils.fs.head(<path>)
 ```
 
 ## Delta Table API
