@@ -1,4 +1,5 @@
 # Data Engineering
+Study material for the Data Engineering Associate/Professional Exam in Databricks
 
 
 ### Resources
