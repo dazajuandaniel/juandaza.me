@@ -1,20 +1,29 @@
 ---
 layout: page
 title: Resume
-subtitle: Analytics | Operational Intelligence | Data Science
+subtitle: Data Modern Architecture | Analytics | Cloud Platforms | Data Science
 ---
 # Experience
-**National Australia Bank (NAB)** - January 2018 to Present
+**AWS** - June 2022 to Present
+<br />Sr. Cloud Architect, Data & Analytics
+
+**Cuusoo** - December 2021 to June 2022
+<br />Databricks Consultant
+
+**IBM** - August 2021 to December 2021
 <br />Data Scientist
 
+**National Australia Bank (NAB)** - January 2018 to August 2021
+<br />Sr. Consultant, Data Science
+
 **WorkForce Delta** - January 2017 to January 2018
-<br />Consultant (Data Science)
+<br />Consultant, Data Science
 
 **EdSmart** - December 2016 to February 2017
 <br />Data Science Intern 
 
 **Unilever** - January 2016 to June 2016
-<br />Customer Development Trainee
+<br />Account Manager
 
 **British Telecommunications** - August 2014 to December 2015
 <br />Sales Engineer
