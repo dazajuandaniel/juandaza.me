@@ -45,7 +45,7 @@ module.exports = {
             sidebarDepth: 2,
             children:[
               '/guide/algos/MLlist',
-              '/guide/dl/deep_learning',
+              '/guide/algos/deep_learning',
               '/guide/algos/NLP',
             ]
           },
@@ -69,14 +69,22 @@ module.exports = {
               '/guide/mlops/terraform',
             ]
           },
-          '/guide/databricks/',
+          '/guide/dataeng/',
+          {
+            title: 'AWS',
+            collapsible: true,
+            sidebarDepth: 2,
+            children:[
+              '/guide/data_engineer/aws',
+            ]
+          },
           {
             title: 'Databricks',
             collapsible: true,
             sidebarDepth: 2,
             children:[
-              '/guide/databricks/db_concepts',
-              '/guide/databricks/db_data_engineering',
+              '/guide/data_engineer/databricks/db_concepts',
+              '/guide/data_engineer/db_data_engineering',
             ]
           }
         ]
