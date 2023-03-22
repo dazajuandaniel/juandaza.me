@@ -69,7 +69,7 @@ module.exports = {
               '/guide/mlops/terraform',
             ]
           },
-          '/guide/dataeng/',
+          '/guide/data_engineer/',
           {
             title: 'Databricks',
             collapsible: true,
