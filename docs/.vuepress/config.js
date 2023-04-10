@@ -45,8 +45,7 @@ module.exports = {
             sidebarDepth: 2,
             children:[
               '/guide/algos/MLlist',
-              '/guide/algos/deep_learning',
-              '/guide/algos/NLP',
+              '/guide/algos/NLP'
             ]
           },
           {
